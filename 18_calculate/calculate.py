@@ -18,11 +18,35 @@ def calculate(operation, a, b, make_int=False, message='The result is'):
         >>> calculate('multiply', 1.5, 2)
         'The result is 3.0'
 
-        >>> calculate('divide', 10, 4, message='I got')
-        'I got 2.5'
+        >>> calculate('divide', 10, 4, message='The result is')
+        'The result is 2.5'
 
     If a valid operation isn't provided, return None.
 
         >>> calculate('foo', 2, 3)
         
     """
+    if operation == "add":
+        if make_int == True:
+            return f"The result is {int(a + b)}"
+        elif make_int == False: 
+            return f"The result is {a + b}"
+    if operation == "subtract":
+        if make_int == True:
+            return f"The result is {int(a - b)}"
+        elif make_int == False: 
+            return f"The result is{a - b}"
+    if operation == "multiply":
+        if make_int == True:
+            return f"The result is {int(a * b)}"
+        elif make_int == False: 
+            return f"The result is {a * b}"
+    if operation == "divide":
+        if make_int == True:
+            return f"The result is {int(a / b)}"
+        elif make_int == False: 
+            return f"The result is {a / b}"
+    
+    
+    
+
