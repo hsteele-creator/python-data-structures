@@ -16,10 +16,17 @@ def sum_range(nums, start=0, end=None):
         6
 
         >>> sum_range(nums, 1, 3)
-        9
+        9ss
 
     If end is after end of list, just go to end of list:
 
         >>> sum_range(nums, 1, 99)
         9
     """
+    new_nums = nums[start:end + 1]
+    
+    sum = 0
+    for num in new_nums:    
+        sum += num
+    return sum
+
