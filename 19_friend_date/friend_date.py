@@ -16,3 +16,6 @@ def friend_date(a, b):
         >>> friend_date(sauron, gandalf)
         True
     """
+    first_hobbies = a[2]
+    second_hobbies = b[2]
+    return any(x == y for x, y in zip(first_hobbies, second_hobbies))
